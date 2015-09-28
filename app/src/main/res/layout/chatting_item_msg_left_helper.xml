@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/leavetime"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="12:22"
+        android:textColor="@color/signature"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:padding="8dip">
+
+        <com.quanliren.quan_two.custom.CircleImageView
+            android:id="@+id/chat_user_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/defalut_logo"
+            app:border_colors="#00000000" />
+
+        <LinearLayout
+            android:id="@+id/helper"
+            android:layout_width="240dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/helper_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="17dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:id="@+id/send_nicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxWidth="96dp"
+                    android:singleLine="true"
+                    android:text="不是刺猬的..."
+                    android:textColor="@color/red_number"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/send_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="报名了您的约会"
+                    android:textColor="@color/caclue"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="17dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/date_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/image_type"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_state_movie_largest" />
+
+                    <TextView
+                        android:id="@+id/title_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="约看电影"
+                        android:textColor="@color/signature"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <com.quanliren.quan_two.custom.emoji.EmoticonsTextView
+                    android:id="@+id/send_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="谁和我一起去看电影啊"
+                    android:textColor="@color/signature"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/see_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/see_detail"
+                android:gravity="center"
+                android:text="点击查看"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+1、检查IP地址端口和socket端口
+2、检查高德地图key
+3、检查版本号
+4、检查数据库版本号
+5、检查设置测试IP入口是否关闭
+6、日志开关
+
+
+360/视频
+1.app/build.gradle
+    1)compile project(':lib-camera-video')
+    2)compile project(':lib-camera360')
+2.AppClass
+    1)onCreate //360
+3.ChatActivity
+    1)OnMoreItemClick //视频
+    2)OnActivityResult //360

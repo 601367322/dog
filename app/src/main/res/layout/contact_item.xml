@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_bg_selector_material"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/activity_bg"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:text="#"
+        android:textColor="@color/location_txt"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_contant"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:background="@drawable/menu_mid_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <com.quanliren.quan_two.custom.UserLogo
+            android:id="@+id/userlogo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/defalut_logo"
+            app:border_colors="#00000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="lisi"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_marginTop="4dp"
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:textColor="@color/signature"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_op"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/opera"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:background="@drawable/opera_selector"
+                android:gravity="center"
+                android:text="关注"
+                android:textColor="@color/white"
+                android:textScaleX="1.15"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/opera_false"
+                android:layout_width="50dp"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="已关注"
+                android:textColor="@color/enable"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

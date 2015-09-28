@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+    <com.quanliren.quan_two.custom.ProgressWebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:paddingLeft="16dp"
+        android:paddingTop="20dp"
+        android:visibility="gone"
+        android:textColor="@color/signature"
+        android:lineSpacingMultiplier="1.4"
+        android:text="1  会员专属精美图标\n2  呆萌表情萌化对方的心，更多表情专属于你\n3  会员漫游让我们去另一个城市一起畅游吧，去寻找那个城市的好朋友\n4  16张背景炫出不同，炫出个性，还等什么？快来晒照片吧\n5  访客查看，想知道谁偷偷看了你吗？那就快加入会员吧！\n6  普通用户只可关注50个好友，会员可关注200个"/>
+
+</LinearLayout>

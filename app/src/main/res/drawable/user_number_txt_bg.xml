@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/user_num_txt_bg"/>
+    <corners android:radius="25dp"/>
+    <size android:height="@dimen/join_user_logo_size" android:width="@dimen/join_user_logo_size"/>
+
+</shape>

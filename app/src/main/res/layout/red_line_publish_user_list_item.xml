@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/list_item_bg_selector_material"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp">
+
+        <com.quanliren.quan_two.custom.UserLogo
+            android:id="@+id/userlogo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/defalut_logo"
+            app:border_colors="#00000000" />
+
+        <com.quanliren.quan_two.custom.UserNickNameRelativeLayout
+            android:id="@+id/nick_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="@color/username"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/done"
+            android:layout_width="60dp"
+            android:layout_height="22dp"
+            android:background="@drawable/send_red_line_btn_material"
+            android:gravity="center"
+            android:text="抛给他"
+            android:textColor="@color/red_text_selector"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

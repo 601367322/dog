@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Widget.AppCompat.Light.ActionBar.My" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="titleTextStyle">@style/actionbar.title.style</item>
+        <item name="subtitleTextStyle">@style/actionbar.subtitle.style</item>
+        <item name="background">@drawable/actionbar_drawable</item>
+        <item name="displayOptions">homeAsUp|showTitle</item>
+        <item name="indeterminateProgressStyle">@style/IndeterminateProgress</item>
+    </style>
+
+    <style name="IndeterminateProgress" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:minWidth">32dip</item>
+        <item name="android:maxWidth">32dip</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+    </style>
+
+    <style name="actionbar.subtitle.style" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@color/abc_primary_text_material_light</item>
+    </style>
+
+    <style name="Widget.AppCompat.Light.ActionBar.My.NoHomeAsUp" parent="Widget.AppCompat.Light.ActionBar.My">
+        <item name="displayOptions">showTitle</item>
+    </style>
+
+    <!-- title -->
+    <style name="actionbar.title.style" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/abc_primary_text_material_light</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- menu -->
+    <style name="MyABmenuTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/abc_primary_text_material_light</item>
+        <item name="android:shadowColor">#ffFFFFFF</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:id="@+id/full"
+    android:orientation="vertical"
+    android:layout_height="fill_parent">
+    <TextView
+        android:id="@+id/empty_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="16sp"
+        android:text="暂无报名，快去报名吧~~~"/>
+</RelativeLayout>

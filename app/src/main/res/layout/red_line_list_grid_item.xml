@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.quanliren.quan_two.custom.UserLogo
+        android:layout_width="@dimen/join_user_logo_size"
+        android:id="@+id/userlogo"
+        android:layout_height="@dimen/join_user_logo_size"
+        app:border_colors="@color/transparent"
+        android:src="@drawable/defalut_logo" />
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true">
+        <layer-list>
+            <!-- 连框颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/nav_press_txt" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item
+                android:bottom="1dp">
+                <shape>
+                    <solid android:color="@color/white" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true" >
+        <layer-list>
+            <!-- 连框颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/nav_press_txt" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item
+                android:bottom="1dp">
+                <shape>
+                    <solid android:color="@color/white" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <!-- 连框颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/darkgray" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item
+                android:bottom="1dp">
+                <shape>
+                    <solid android:color="@color/white" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

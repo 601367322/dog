@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_fl"
+        android:background="@drawable/bottom_tab"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/chat_voice_btn"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chat_voice_btn" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chat_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/chat_radio_btn"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/normaltalk"
+            android:textColor="@color/chat_voice_btn_bg"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/edit_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:background="@drawable/chat_input_bg"
+            android:gravity="center_vertical"
+            android:paddingRight="8dp">
+
+            <com.quanliren.quan_two.custom.emoji.EmoticonsEditText
+                android:id="@+id/et_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:imeOptions="actionSend"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@null"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="6dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:maxlen="150" />
+
+            <ImageView
+                android:id="@+id/chat_face_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/chat_face_btn" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="58dp"
+            android:layout_height="34dp">
+
+            <ImageView
+                android:id="@+id/chat_add_btn"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/chat_add_btn" />
+
+            <Button
+                android:id="@+id/send_btn"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/chat_send_btn"
+                android:text="发送"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/msg_emote_divider"
+        android:focusable="false" />
+
+    <RelativeLayout
+        android:id="@+id/chat_layout_emote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/msg_editor_backgroud"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/chat_eiv_inputview"
+            android:name="com.quanliren.quan_two.custom.emoji.EmoteView_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/more_gridview_rl"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+            <GridView
+                android:id="@+id/more_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:cacheColorHint="@color/transparent"
+                android:fadingEdge="none"
+                android:gravity="center_vertical"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:padding="8dp"
+                android:scrollingCache="false"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="32dip"></GridView>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

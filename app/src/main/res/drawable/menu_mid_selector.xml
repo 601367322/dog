@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+
+            <!-- 连框颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/white" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/mborder_color" />
+
+                    <padding android:left="8dp" android:right="8dp" android:top="8dp" android:bottom="8dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+
+            <!-- 连框颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/white" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item android:bottom="1px" android:top="1px">
+                <shape>
+                    <solid android:color="@color/white" />
+
+                    <padding android:left="8dp" android:right="8dp" android:top="8dp" android:bottom="8dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

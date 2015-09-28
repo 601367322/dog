@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg">
+
+    <ImageView
+        android:id="@+id/mHeadImg"
+        android:layout_width="match_parent"
+        android:layout_height="415dp"
+        android:layout_marginTop="-80dp"
+        android:background="@drawable/user_detail_top_bg"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <ScrollView
+        android:id="@+id/scrol"
+        android:layout_width="match_parent"
+        android:clipToPadding="false"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/scroll_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/bg_click_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="40dp">
+
+                        <com.quanliren.quan_two.custom.CircleImageView
+                            android:id="@+id/upload_userlogo"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/default_userlogo"
+                            app:border_colors="@color/transparent"
+                            app:border_widths="0dp" />
+
+                        <com.quanliren.quan_two.custom.RoundProgressBar
+                            android:id="@+id/loadProgressBar"
+                            android:layout_width="102dp"
+                            android:layout_height="102dp"
+                            android:layout_centerHorizontal="true"
+                            android:progressDrawable="@drawable/progressbar"
+                            android:visibility="visible"
+                            app:proroundColor="@color/white"
+                            app:proroundProgressColor="@color/title_press_txt"
+                            app:rmax="100"
+                            app:style="STROKE"
+                            app:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="没头像没人爱"
+                        android:textColor="@color/red"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/activity_bg"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/menu_mid_selector"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text="昵　　称："
+                            android:textColor="@color/title"
+                            android:textSize="16sp" />
+
+                        <com.quanliren.quan_two.custom.UserNameEditText
+                            android:id="@+id/nickname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:textCursorDrawable="@null"
+                            android:cursorVisible="true"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:maxlen="8" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/menu_mid_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text="生　　日："
+                            android:textColor="@color/title"
+                            android:textSize="16sp" />
+
+                        <com.quanliren.quan_two.custom.AgeTextView
+                            android:id="@+id/age"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:text="1990-12-08"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:maxlen="6" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/menu_mid_selector"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text="性　　别："
+                            android:textColor="@color/title"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:id="@+id/sex_btn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/boy_girl"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_icon"
+                                android:checked="true"
+                                android:paddingLeft="8dp"
+                                android:text="女"
+                                android:textColor="@color/title"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/girl_boy"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:layout_weight="2"
+                                android:button="@drawable/radiobtn_icon"
+                                android:paddingLeft="8dp"
+                                android:text="男"
+                                android:textColor="@color/title"
+                                android:textSize="16sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/menu_mid_selector"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text="密　　码："
+                            android:textColor="@color/title"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:inputType="textPassword"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_marginTop="1dp"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:background="@drawable/menu_mid_selector"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="重复密码："-->
+                    <!--android:textColor="@color/title"-->
+                    <!--android:textSize="14sp" />-->
+
+                    <!--<EditText-->
+                    <!--android:id="@+id/confirm_password"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:background="@null"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:inputType="textPassword"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="14sp" />-->
+                    <!--</LinearLayout>-->
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="80dp"-->
+                    <!--android:layout_marginTop="1dp"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--</LinearLayout>-->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:text="提示：注册后，性别将无法更改"
+                            android:textColor="@color/signature"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_action_navigation_arrow_back">
+
+            </android.support.v7.widget.Toolbar>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

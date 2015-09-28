@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:background="@color/white"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp">
+
+    <com.quanliren.quan_two.custom.RoundAngleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <com.quanliren.quan_two.custom.UserLogo
+        android:id="@+id/userlogo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/defalut_logo"
+        app:border_colors="@color/transparent"
+        app:border_widths="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/content_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/userlogo"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/userlogo"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginRight="30dp"
+            android:ellipsize="end"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textColor="@color/time"
+            android:textSize="14sp" />
+
+
+        <com.quanliren.quan_two.custom.emoji.EmoticonsTextView
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nickname"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/username"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/reply_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/content"
+            android:src="@drawable/reply" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/content"
+            android:gravity="center"
+            android:textColor="@color/time"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/delete_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/time">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:background="@color/line_background"></View>
+
+            <TextView
+                android:id="@+id/delete_content"
+                android:layout_width="46dp"
+                android:layout_height="28dp"
+                android:layout_below="@id/content"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/red_number"
+                android:textSize="13sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/content_rl"
+        android:background="#dddddd"/>
+</RelativeLayout>

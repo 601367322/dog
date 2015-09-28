@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/leavetime"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="12:22"
+        android:textColor="@color/signature"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:padding="8dip">
+
+        <com.quanliren.quan_two.custom.CircleImageView
+            android:id="@+id/chat_user_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/defalut_logo"
+            app:border_colors="#00000000" />
+
+        <LinearLayout
+            android:id="@+id/voice_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/chat_left_content_selector"
+            android:gravity="center_vertical"
+            android:minHeight="40dp"
+            android:minWidth="60dp">
+
+            <ImageView
+                android:id="@+id/voice"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/chat_left_animation" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/signature"
+            android:textSize="12sp"/>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/error_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_error_info"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

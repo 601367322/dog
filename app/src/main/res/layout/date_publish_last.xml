@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="题目"
+                    android:textColor="@color/signature"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/title_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="42dp"
+                    android:clickable="true"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/caret"
+                    android:gravity="center|left"
+                    android:hint="@string/please_choise"
+                    android:textColor="@color/title"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="80dp"
+                android:background="@color/enable" />
+
+            <LinearLayout
+                android:id="@+id/want_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="目的"
+                    android:textColor="@color/signature"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/want_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="42dp"
+                    android:clickable="true"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/caret"
+                    android:gravity="center|left"
+                    android:hint="@string/please_choise"
+                    android:textColor="@color/title"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/want_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="80dp"
+                android:background="@color/enable"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="时间"
+                    android:textColor="@color/signature"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/time_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="42dp"
+                    android:clickable="true"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/caret"
+                    android:gravity="center|left"
+                    android:hint="@string/please_choise"
+                    android:textColor="@color/title"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="80dp"
+                android:background="@color/enable" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:id="@+id/place_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="地点"
+                    android:textColor="@color/signature"
+                    android:textSize="16sp" />
+
+                <com.quanliren.quan_two.custom.UserNameEditText
+                    android:id="@+id/place"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="42dp"
+                    android:clickable="true"
+                    android:drawablePadding="8dp"
+                    android:gravity="center|left"
+                    android:hint="输入地点"
+                    android:textColor="@color/title"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/place_eat"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="42dp"
+                    android:clickable="true"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/caret"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:hint="@string/please_choise"
+                    android:singleLine="true"
+                    android:textColor="@color/title"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="80dp"
+                android:background="@color/enable" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="约会对象"
+                    android:textColor="@color/signature"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/sex_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/boy_girl"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:button="@drawable/radiobtn_icon"
+                        android:checked="true"
+                        android:paddingLeft="8dp"
+                        android:text="女"
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/girl_boy"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:button="@drawable/radiobtn_icon"
+                        android:paddingLeft="8dp"
+                        android:text="男"
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/everyone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:button="@drawable/radiobtn_icon"
+                        android:paddingLeft="8dp"
+                        android:text="不限"
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="80dp"
+                android:background="@color/enable" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="消费"
+                    android:textColor="@color/signature"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/xiaofei_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="39dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/me_give_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:gravity="left|center"
+                        android:button="@drawable/radiobtn_icon"
+                        android:paddingLeft="8dp"
+                        android:layout_marginLeft="4dp"
+                        android:text="我请客"
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/you_me"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:button="@drawable/radiobtn_icon"
+                        android:paddingLeft="8dp"
+                        android:layout_marginLeft="4dp"
+                        android:text="AA制"
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="80dp"
+                android:background="@color/enable" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="消耗狗粮"
+                    android:textColor="@color/signature"
+                    android:textSize="16sp" />
+
+
+                <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                    android:id="@+id/coin_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    app:dsb_indicatorColor="?attr/colorPrimary"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="?attr/colorPrimary"
+                    app:dsb_trackColor="@color/line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/money_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="　　"
+                    android:textColor="@color/filter_title"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/money_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="42dp"
+                    android:clickable="true"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/caret"
+                    android:gravity="center"
+                    android:hint="@string/please_choise"
+                    android:textColor="@color/title"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="80dp"
+                android:background="@color/enable" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="说明"
+                    android:textColor="@color/signature"
+                    android:textSize="16sp" />
+
+                <com.quanliren.quan_two.custom.UserNameEditText
+                    android:id="@+id/remark_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="42dp"
+                    android:minHeight="30dp"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:hint="请输入文字"
+                    android:textColor="@color/title"
+                    android:textSize="16sp"
+                    app:maxlen="100" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="80dp"
+                android:background="@color/enable" />
+
+            <Button
+                android:id="@+id/publish_date"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/public_date_drawable"
+                android:text="发布"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="提示：消耗狗粮越多 排行越靠前"
+                android:textColor="@color/nav_press_txt"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

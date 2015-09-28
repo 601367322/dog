@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>单身汪帮助</title>
+    <meta name="viewport"
+          content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <style type="text/css">
+        body{
+        font:18px/20px "Microsoft YaHei",arial,serif;
+        background:#efefef;
+        }
+        img{border:0;}
+        *{margin:0;padding:0;}
+    </style>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+$(function(){
+var imglist =$(".imgs");
+//安卓4.0+等高版本不支持window.screen.width，安卓2.3.3系统支持
+var _width;
+doDraw();
+
+window.onresize = function(){
+	//捕捉屏幕窗口变化，始终保证图片根据屏幕宽度合理显示
+	doDraw();
+}
+
+function doDraw(){
+	_width = window.innerWidth;
+	for( var i = 0, len = imglist.length; i < len; i++){
+		DrawImage(imglist[i],_width);
+	}
+}
+
+function DrawImage(ImgD,_width){ 
+	var image=new Image(); 
+	image.src=ImgD.src; 
+	image.onload = function(){
+		//限制，只对宽高都大于30的图片做显示处理
+		if(image.width>30 && image.height>30){ 
+			if(image.width>_width){
+				ImgD.width=_width; 
+				ImgD.height=(image.height*_width)/image.width; 
+				$(".touchslider-viewport").height((image.height*_width)/image.width);
+			}else{ 
+				ImgD.width=image.width; 
+				ImgD.height=image.height; 
+				$(".touchslider-viewport").height(image.height);
+			} 
+
+		}	
+	}
+
+}
+   
+})
+
+    </script>
+</head>
+<body>
+<div style="text-align:center">
+    <img src="function.jpg" class="imgs" style="margin:0 auto;"></div>
+</body>
+</html>

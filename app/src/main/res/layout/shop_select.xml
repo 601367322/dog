@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@color/actionbar" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/ic_title_back"
+            android:drawablePadding="5.0dip"
+            android:gravity="left|center"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="返回" />
+
+        <TextView
+            android:id="@+id/btn_title_city"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/ic_main_title_city"
+            android:drawablePadding="5.0dip"
+            android:text="北京"
+            android:gravity="left|center" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="29.0dip"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="7.5dip"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="7.0dip"
+            android:layout_toLeftOf="@id/btn_title_city"
+            android:layout_toRightOf="@id/btn_back"
+            android:background="@drawable/bg_search_bar"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <Button
+                android:id="@+id/btn_edit_search"
+                android:layout_width="fill_parent"
+                android:layout_height="29.0dip"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/ic_search_bar_search"
+                android:drawablePadding="5.0dip"
+                android:gravity="left|center"
+                android:hint="请输入商户名或地点"
+                android:paddingLeft="6.5dip"
+                android:singleLine="true"
+                android:textSize="14.0sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="fill_parent"
+                android:layout_height="29.0dip"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/ic_search_bar_search"
+                android:drawablePadding="5.0dip"
+                android:gravity="left|center"
+                android:hint="请输入商户名或地点"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingLeft="6.5dip"
+                android:singleLine="true"
+                android:textSize="14.0sp" />
+
+            <ImageButton
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/transparent"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:src="@drawable/bg_btn_restaurant_search"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/divider_line" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="60.0dip"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/hot_layout"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_hot_restaurant"
+                            android:drawablePadding="4.0dip"
+                            android:gravity="center_vertical"
+                            android:text="热门餐厅"
+                            android:textAppearance="@style/font_big_dark_gray" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1.0px"
+                        android:layout_height="fill_parent"
+                        android:background="@color/divider_line" />
+
+                    <LinearLayout
+                        android:id="@+id/mine_layout"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_mine_attention"
+                            android:drawablePadding="4.0dip"
+                            android:gravity="center_vertical"
+                            android:text="我关注的餐厅"
+                            android:textAppearance="@style/font_big_dark_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include layout="@layout/divider_line" />
+
+                <TextView
+                    android:id="@+id/tv_hot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:drawableLeft="@drawable/ic_hot_area"
+                    android:drawablePadding="8.0dip"
+                    android:paddingLeft="@dimen/activity_reg_horizontal_margin"
+                    android:paddingRight="@dimen/activity_reg_horizontal_margin"
+                    android:text="热门商圈" />
+                <com.quanliren.quan_two.custom.CustomGridView
+                    android:id="@+id/grid_hot_regions"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6.0dip"
+                    android:background="@color/divider_line"
+                    android:gravity="center"
+                    android:horizontalSpacing="1.0dip"
+                    android:numColumns="3"
+                    android:paddingTop="1.0px"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="1.0dip" />
+
+                <include layout="@layout/divider_line" />
+
+                <TextView
+                    android:id="@+id/tv_cuisine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:drawableLeft="@drawable/ic_hot_cuisine"
+                    android:drawablePadding="8.0dip"
+                    android:paddingLeft="@dimen/activity_reg_horizontal_margin"
+                    android:paddingRight="@dimen/activity_reg_horizontal_margin"
+                    android:text="菜系" />
+
+                <com.quanliren.quan_two.custom.CustomGridView
+                    android:id="@+id/grid_cuisine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6.0dip"
+                    android:background="@color/divider_line"
+                    android:horizontalSpacing="1.0dip"
+                    android:numColumns="3"
+                    android:paddingTop="1.0px"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="1.0dip" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ListView
+            android:id="@+id/history_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

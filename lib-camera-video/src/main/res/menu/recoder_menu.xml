@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/led"
+        android:title="闪光灯"
+        android:icon="@drawable/record_camera_flash_led_selector"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/c_switch"
+        android:title="摄像头"
+        android:icon="@drawable/record_camera_switch_selector"
+        app:showAsAction="always"/>
+</menu>

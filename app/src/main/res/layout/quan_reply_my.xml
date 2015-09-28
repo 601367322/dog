@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_bg_selector_material"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <com.quanliren.quan_two.custom.CircleImageView
+        android:id="@+id/userlogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/defalut_logo"
+        app:border_colors="@color/transparent"
+        app:border_widths="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/userlogo"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/userlogo"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLength="16"
+                android:singleLine="true"
+                android:text="张三"
+                android:textColor="@color/username"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2-1"
+                android:textColor="@color/time"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.quanliren.quan_two.custom.emoji.EmoticonsTextView
+            android:id="@+id/signature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/signature"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <com.quanliren.quan_two.custom.RoundAngleImageView
+        android:id="@+id/content_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/defalut_logo"
+        app:roundHeight="5dp"
+        app:roundWidth="5dp" />
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:scaleType="centerCrop"
+        android:textColor="@color/signature"
+        android:textSize="12sp"
+        android:visibility="gone" />
+</LinearLayout>

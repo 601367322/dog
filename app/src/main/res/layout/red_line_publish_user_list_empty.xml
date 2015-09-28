@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:clickable="true"
+    android:layout_marginTop="10dp"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/menu_one_selector"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_item_bg_selector_material"
+        android:paddingRight="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/go_near"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_marginRight="32dp"
+            android:text="您还没有关注的好友，快去附近的人找找吧~"
+            android:textColor="@color/nav_press_txt"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/go_near"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@id/go_near"
+            android:src="@drawable/redline_message_icon" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/caret" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.quanliren.quan_two.custom.emoji.XhsEmoticonsKeyBoardBar_ xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar"
+        android:layout_weight="1">
+
+        <com.quanliren.quan_two.pull.swipe.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:focusable="false"
+                android:listSelector="#00000000"></ListView>
+
+        </com.quanliren.quan_two.pull.swipe.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/chat_radio_panel"
+            layout="@layout/chat_radio_panel"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</com.quanliren.quan_two.custom.emoji.XhsEmoticonsKeyBoardBar_>

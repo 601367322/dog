@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <com.a.net.simonvt.numberpicker.NumberPicker
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <com.a.net.simonvt.numberpicker.NumberPicker
+        android:layout_width="wrap_content"
+        android:id="@+id/weight"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_height="wrap_content" />
+
+    <com.a.net.simonvt.numberpicker.NumberPicker
+        android:id="@+id/body"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

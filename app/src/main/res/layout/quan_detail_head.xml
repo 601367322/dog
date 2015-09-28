@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/activity_bg">
+
+    <RelativeLayout
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/click_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+                <com.quanliren.quan_two.custom.CircleImageView
+                    android:id="@+id/userlogo"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="centerCrop"
+                    app:border_colors="#00000000" />
+
+                <com.quanliren.quan_two.custom.UserNickNameRelativeLayout
+                    android:id="@+id/nickname_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/userlogo" />
+                <com.quanliren.quan_two.custom.DongTaiZanLinearLayout
+                    android:id="@+id/zan_ll"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/zan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:background="@drawable/zan"
+                        android:gravity="center_vertical"
+                        android:textSize="12sp" />
+                </com.quanliren.quan_two.custom.DongTaiZanLinearLayout>
+            </LinearLayout>
+
+        <com.quanliren.quan_two.custom.SquareLayout
+            android:id="@+id/content_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+                <com.quanliren.quan_two.custom.SquareImageView
+                    android:id="@+id/img_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+
+                <com.quanliren.quan_two.custom.emoji.EmoticonsTextView
+                    android:id="@+id/signature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:shadowColor="@color/black"
+                    android:text="动感十足"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+                    <View
+                        android:id="@+id/show"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dongtai_reply_background"
+                        android:drawableLeft="@drawable/dt_list_time"
+                        android:drawablePadding="4dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="6dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/dongtai_reply_background"
+                        android:drawableLeft="@drawable/dt_list_location"
+                        android:drawablePadding="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="6dp"
+                        android:paddingTop="2dp"
+                        android:text=" 北京市"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/reply_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/dongtai_reply_background"
+                        android:drawableLeft="@drawable/dt_list_reply"
+                        android:drawablePadding="4dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="6dp"
+                        android:paddingTop="2dp"
+                        android:text="23 条评论"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </com.quanliren.quan_two.custom.SquareLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/reply_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cv"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:text="共 23 条评论:"
+        android:textColor="@color/username"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:padding="8dp"
+    android:background="@drawable/list_item_bg_selector_material"
+    android:orientation="vertical">
+
+    <com.quanliren.quan_two.custom.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/userlogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/defalut_logo"
+        app:border_colors="#FFFFFF"
+        app:border_widths="2dp" />
+
+    <com.quanliren.quan_two.custom.UserNickNameRelativeLayout
+        android:id="@+id/nick_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/userlogo"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/userlogo" />
+
+    <TextView
+        android:id="@+id/signature"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/nick_ll"
+        android:layout_below="@id/nick_ll"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:text="这个人好懒，什么都没有留下"
+        android:gravity="bottom"
+        android:maxLines="1"
+        android:textColor="@color/signature"
+        android:textSize="12sp" />
+
+    <com.quanliren.quan_two.custom.StateTextView
+        android:layout_width="wrap_content"
+        android:id="@+id/state"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/nick_ll"
+        android:layout_below="@+id/signature"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/message_location_icon"
+        android:text="0.05km | 58分钟前"
+        android:textColor="@color/signature"
+        android:layout_below="@+id/signature"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

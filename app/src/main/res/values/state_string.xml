@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="state_friend">我想请陪同</string>
+    <color name="state_friend_color">#f585ff</color>
+
+    <color name="state_friend_color_large">#f585ff</color>
+    <string name="state_dinner">约人吃饭</string>
+    <color name="state_dinner_color">#ffa155</color>
+    <color name="state_dinner_color_large">#ffa155</color>
+    <string name="state_quite">我想安静一会</string>
+    <color name="state_quite_color">#2d2d2d</color>
+    <color name="state_quite_color_large">#adad99</color>
+    <string name="state_girl">临时情侣</string>
+    <color name="state_girl_color">#7b0000</color>
+    <color name="state_girl_color_large">#fc6464</color>
+
+    <string name="state_car">我想找游伴</string>
+    <color name="state_car_color">#446417</color>
+    <color name="state_car_color_large">#b3da5b</color>
+    <string name="state_movie">约看电影</string>
+    <color name="state_movie_color">#125c60</color>
+    <color name="state_movie_color_large">#61dce2</color>
+    <string name="state_normal">无状态</string>
+
+</resources>

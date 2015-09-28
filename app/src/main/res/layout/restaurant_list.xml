@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/search_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_business"
+            android:layout_width="fill_parent"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_bg"
+            android:gravity="center_vertical"
+            android:hint="搜索商户"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/search_restarent"
+            android:layout_width="50dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/nav_press_txt"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fillter_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/search_ll"
+        android:layout_gravity="center_vertical"
+        android:background="#f4f4f4"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/all_business"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全部商圈"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/all_food"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全部美食"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/default_sort"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="默认排序"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <com.quanliren.quan_two.pull.swipe.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe"
+        android:layout_below="@+id/fillter_ll">
+
+        <com.quanliren.quan_two.pull.XListView
+            android:id="@+id/listview_bus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/actionbar"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="1dp"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:scrollbars="vertical" />
+    </com.quanliren.quan_two.pull.swipe.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/select_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/fillter_ll"
+        android:background="@color/transblack"
+        android:visibility="gone"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fillter_lll"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:layout_below="@+id/fillter_ll"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/listview_1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/actionbar"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@color/mborder_color"
+            android:scrollbars="vertical"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/listview_2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/actionbar"
+            android:layout_weight="1"
+            android:listSelector="@color/mborder_color" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/fillter_food"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:layout_below="@+id/fillter_ll"
+        android:background="@color/white"
+        android:listSelector="@color/mborder_color"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/fillter_priority"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:layout_below="@+id/fillter_ll"
+        android:background="@color/white"
+        android:listSelector="@color/mborder_color"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

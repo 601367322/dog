@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true">
+        <layer-list>
+
+            <!-- 连框颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/msg_emote_divider" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item android:right="1px">
+                <shape>
+                    <solid android:color="#d8d8d8" />
+
+                    <padding android:bottom="6dp" android:left="16dp" android:right="16dp" android:top="6dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+
+            <!-- 连框颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/msg_emote_divider" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item android:right="1px">
+                <shape>
+                    <solid android:color="#d8d8d8" />
+
+                    <padding android:bottom="6dp" android:left="16dp" android:right="16dp" android:top="6dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+
+            <!-- 连框颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/msg_emote_divider" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item android:right="1px">
+                <shape>
+                    <solid android:color="@color/white" />
+
+                    <padding android:bottom="6dp" android:left="16dp" android:right="16dp" android:top="6dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

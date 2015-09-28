@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/ripple_material_dark">
+   <!-- <item>
+        <selector>
+            <item
+                android:drawable="@drawable/button_bg_disable"
+                android:state_enabled="false" />
+            <item
+                android:drawable="@drawable/button_bg_focus"
+                android:state_focused="true" />
+            <item android:drawable="@drawable/button_bg_normal" />
+        </selector>
+    </item>-->
+</ripple>

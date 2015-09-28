@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.quanliren.quan_two.activity">
+
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 网络访问 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 检测wifi -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- SD卡访问 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 检查网络状态 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <!-- 创建快捷方式 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 录音 -->
+    <!-- 下载 -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 允许程序禁用键盘锁 -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 这个权限用于获取wifi的获取权限,wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 开机 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 允许程序读取或写入系统设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 短信 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!--蓝牙-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!--读取联系人-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!--读取外部存储-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 照相机-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.quanliren.quan_two.application.AppClass_"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseThemeNoAnimation" >
+        <activity
+            android:name=".PropertiesActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedThemeNoTrans"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".near.NearPeopleActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/near_peoples"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".public_comments.ChoseLocationActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/chose_location"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name=".user.DownDetailActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" >
+        </activity>
+        <activity
+            android:name=".redline.RedLineDetailActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/love_send"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentAppBaseTheme" />
+        <activity
+            android:name=".group.date.ConsumerRankingNavActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".redline.RedLinePublishUserListActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/trans_redline"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".seting.HtmlActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".group.date.MyDateNavActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".Whatsnew_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".public_comments.SearchRestaurant_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".public_comments.RestaurantListActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/bussiness_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".seting.SetingOtherActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/seting"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".user.UserInfoActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".user.LoginActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+        <activity
+            android:name=".group.date.DateFilterActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/date_filter"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".user.MyVisitActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/my_visit"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".user.SearchFriendActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".group.date.DateListActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/tt_date"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" >
+        </activity>
+        <activity
+            android:name=".group.date.DateDetailActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/tt_date"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".group.date.DatePublishActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/publish_date"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".reg.RegFirst_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".seting.emoticon.EmoticonDetailActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".user.PersonalDongTaiActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/personal_dongtai"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".public_comments.RestaurantDetailActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".reg.RegSecond_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <!-- android:theme="@style/AppBaseThemeTranslucent" -->
+        <activity
+            android:name=".user.ChatActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".group.PhotoAlbumMainActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".seting.ServiceInfoActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".seting.FunctionActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reg.RegGetCode_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".user.UserOtherInfoActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".group.date.DateApplyManageActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".seting.EmoticonListActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".group.ThroughActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" >
+        </activity>
+
+        <!--<activity-->
+        <!--android:name=".group.date.FilterDateActivity_"-->
+        <!--android:screenOrientation="portrait"android:configChanges="orientation|keyboardHidden|screenSize"-->
+        <!--android:theme="@style/AppBaseThemeTranslucent">-->
+
+        <!--</activity>-->
+        <activity
+            android:name=".group.DongTaiListNavActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/near_quan"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".user.MyPersonalDongTaiActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".group.PublishActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".group.PublishDongTaiActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".user.BlackListActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".group.date.OtherDateListActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/other_date"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".seting.RemindMessageActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:label="@string/remind_message"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".user.MyFavoriteNavActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme"></activity>
+        <activity
+            android:name=".seting.emoticon.EmoticonHistoryListActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".reg.ForgetPassWordActivity1_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".redline.MyRedLineListNavActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".shop.ShopVip_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/shop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".reg.ForgetPassWordActivity2_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".user.UserInfoEditActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".seting.AboutUsActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:label="@string/seting_about_us"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".shop.VipIntroduceListActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:label="@string/vip_introduce"
+            android:theme="@style/AppBaseThemeTranslucent" />
+
+        <activity
+            android:name=".group.DongTaiDetailActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/quan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".seting.TestSetting_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/test_setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".seting.ShareToFriendActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Noti"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.ModifyPasswordActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".image.ImageBrowserActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentActivity" />
+
+        <!-- QQ -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1101960968" />
+            </intent-filter>
+        </activity>
+        <!-- QQ -->
+        <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Animation.Translucent" />
+        <!-- 微信 -->
+        <!-- 高德地图 正式-->
+         <meta-data
+             android:name="com.amap.api.v2.apikey"
+             android:value="f0e23183fb94b98e120dc0da8517bece" />
+        <!-- 高德地图 debug -->
+        <!--<meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="fd2ee34272da5ca5eda5393ccb02f0cc" />-->
+
+        <!-- 设置IP测试入口 open close-->
+        <meta-data
+            android:name="TEST_SETTING"
+            android:value="open"></meta-data>
+
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 支付宝 -->
+        <meta-data
+        android:name="UMENG_CHANNEL"
+        android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <receiver android:name="com.quanliren.quan_two.receiver.AlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.quanliren.quan_two.service.checkconnect" />
+                <!-- 定时检查登陆状态 -->
+                <action android:name="com.quanliren.quan_two.service.checkmessage" />
+                <!-- 定时检查未发送信息 -->
+                <action android:name="com.quanliren.quan_two.service.outline" />
+                <!-- 下线通知 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- 网络通知 -->
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quanliren.quan_two.receiver.BootCompletedAlarmReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 开机启动 -->
+            </intent-filter>
+        </receiver>
+
+        <!-- android:process=":remote" -->
+        <service
+            android:name="com.quanliren.quan_two.service.QuanPushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="com.quanliren.quan_two.service.connect" />
+                <!-- 登陆 -->
+                <action android:name="com.quanliren.quan_two.service.reconnect" />
+                <!-- 重新登陆 -->
+                <action android:name="com.quanliren.quan_two.service.keep_alive" />
+                <!-- 心跳 -->
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.quanliren.quan_two.service.DownLoadEmoticonService_"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.quanliren.quan_two.service.downloademoticon" />
+                <!-- 下载表情 -->
+            </intent-filter>
+        </service>
+
+        <!-- 短信拦截 -->
+        <receiver android:name="com.quanliren.quan_two.receiver.SmsReceiver" >
+            <intent-filter android:priority="800" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".bindnum.BindFirst_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".bindnum.LookContactState_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".bindnum.BindSecond_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".bindnum.BindActivity_"
+            android:label="查看联系人"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+        <activity
+            android:name=".seting.DogCoinActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55939e0067e58eaa5b003e2a" />
+
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".seting.IntroduceActivity_"
+            android:configChanges="orientation|keyboard"
+            android:label="@string/title_activity_introduce"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent">
+        </activity>
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"/>
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.quanliren.quan_two.picturecrop.PictureCropActivity_"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemeTranslucent"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            />
+
+        <!-- camera360 -->
+        <meta-data
+            android:name="EDIT_SDK_KEY"
+            android:value="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"/>
+        <meta-data
+            android:name="BD_APP_ID"
+            android:value="ea8d04692735bc1f"/>
+        <meta-data
+            android:name="BD_APP_SECRET"
+            android:value="vCGG9QZ94tcGxTjangCc_b_VuXwmfGd2"/>
+        <activity
+            android:name="us.pinguo.edit.sdk.PGEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <service
+            android:name="us.pinguo.bigdata.BDUpService"
+            android:process=":bdupload">
+        </service>
+        <receiver android:name="us.pinguo.bigdata.BDAlarmReceiver">
+            <intent-filter>
+                <action android:name="bd_alarm"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

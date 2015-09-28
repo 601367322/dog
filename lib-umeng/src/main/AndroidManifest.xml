@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="client.chat.kong.com.lib_umeng">
+
+    <application>
+
+    </application>
+
+</manifest>

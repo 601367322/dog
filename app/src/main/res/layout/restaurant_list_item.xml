@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="@color/white"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:id="@+id/res_top"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_width="fill_parent"
+        android:paddingBottom="8dp"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/resta_image"
+        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="76dp"
+        android:src="@drawable/image_group_qzl"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginRight="70dp"
+            android:text="京兆尹"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/avg_price"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:text="人均￥0"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginRight="70dp"
+            android:textColor="@color/signature"
+            android:layout_height="wrap_content"
+            />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/categories"
+            android:layout_width="fill_parent"
+            android:textSize="15sp"
+            android:textColor="@color/signature"
+            android:layout_marginRight="70dp"
+            android:text="创意菜"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/signature"
+            android:layout_alignParentRight="true"
+            android:text="100km"
+            android:layout_height="wrap_content"/> </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/address"
+                android:layout_width="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:ellipsize="end"
+
+                android:textSize="15sp"
+                android:textColor="@color/signature"
+                android:text="地点"
+                android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+    <!--<TextView-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:layout_below="@id/res_top"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="32dp"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="16sp"-->
+        <!--android:visibility="gone"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:background="@color/nav_press_txt"-->
+        <!--android:text="在这约"/>-->
+    <TextView
+        android:id="@+id/eat_resta"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:text="在这约"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/public_date_drawable"/>
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/res_top"
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:background="@color/divider_line"
+        android:text="在这约"/>
+</RelativeLayout>

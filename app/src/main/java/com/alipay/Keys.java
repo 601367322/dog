@@ -1,0 +1,18 @@
+package com.alipay;
+
+/**
+ * Created by BingBing on 2014/9/4.
+ */
+public class Keys {
+    //合作身份者id，以2088开头的16位纯数字
+    public static final String DEFAULT_PARTNER = "2088311410365242";
+
+    //收款支付宝账号
+    public static final String DEFAULT_SELLER = "beijingquanliren@163.com";
+
+    //商户私钥，自助生成
+    public static final String PRIVATE = "MIICeQIBADANBgkqhkiG9w0BAQEFAASCAmMwggJfAgEAAoGBANLAfifv/kRXLFtJ3RCA8Zf2NvNrpeWjb+Z7wkRwqR2wejGs02ixScbEzgpkXmxLyF1gd9b+1NF5qGTK8q0HnduUhwDCUFP7pMzNpnh+kKUdGpb3lmaWiDLxa6C9ZUVb3ZIA5LNYk7pgBNDNxT1ujWsaRlvgizxCwPFratjoRXQZAgMBAAECgYEAhQBD3VJgpaJZ9NZ9c1/cl6kjbqU90dk90jfCFsz+fSUVSGooFMblp1ImMXq7+B4vOXaayoyRpAzhz5IgakAHRxmBott/U79MVZNyaQV0k4t/OOgaWr1VLK6fcy4cQ+NFU5qwbb3/yokZzMIWKWwzwQDKOBk5Iy4kT76HXGZObB0CQQDupyL9eSWZnPu9pIaMAvW54Un4BXe38T7iA35Bdp/EQ0sLdLQP2lD2z20btN3OFpJlMCyxSqtHgL5LzAoZti3bAkEA4hIsiDYUiXuzeiLomH1TYiRe8kmg79WvmNxY/k2fJs5rhwTmd4cK9oLhFMP29Ocxz51GetoP9JAXRusKanE6GwJBAJceWKa+vtNtt27Xrqcb/LOOeANImw1sAtClO56CWhqyLeP8K0Tajmgq4sEnn0gvvNW8UqCVUq39VQK0GjU7yf8CQQCUYmloXlbMhq0fFZqlvFzmpgjL7xf7U76WDss636f+yK47STQccD753p3uC1IlHTrMkuaX7FlcpNcibVPA2eDRAkEAxXEIbhSmw0KAFt1h45CS7BILdx9IWWLIkdBh0dkBCVDezp9frWN0YShWzhTt+Gh1gXgoIbDiBk4G1xbGSvnMGg==";
+
+    public static final String PUBLIC = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnxj/9qwVfgoUh/y2W89L6BkRAFljhNhgPdyPuBV64bfQNN1PjbCzkIM6qRdKBoLPXmKKMiFYnkd6rAoprih3/PrQEB/VsW8OoM8fxn67UDYuyBTqA23MML9q1+ilIZwBC2AQ2UBVOrFXfFl75p6/B5KsiNG9zpgmLCUYuLkxpLQIDAQAB";
+
+}

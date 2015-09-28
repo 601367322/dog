@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_bg_selector_material"
+    android:padding="8dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--<com.quanliren.quan_two.custom.RoundAngleImageView-->
+            <!--android:id="@+id/userlogo"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--app:roundHeight="5dp"-->
+            <!--app:roundWidth="5dp" />-->
+        <com.quanliren.quan_two.custom.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/userlogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/defalut_logo"
+            app:border_colors="#FFFFFF"
+            app:border_widths="2dp"/>
+
+        <com.quanliren.quan_two.custom.UserNickNameRelativeLayout
+            android:layout_marginTop="2dp"
+            android:id="@+id/nickLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/userlogo"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/userlogo" />
+
+        <TextView
+            android:id="@+id/signature"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/nickLl"
+            android:layout_below="@id/nickLl"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:textColor="@color/signature"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/userlogo"
+            android:layout_alignLeft="@id/nickLl"
+            android:drawableLeft="@drawable/message_location_icon"
+            android:text="0.05km | 58分钟前"
+            android:textColor="@color/signature"
+            android:textSize="12sp" />
+        <ImageView
+            android:id="@+id/agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/dateable"/>
+    </RelativeLayout>
+</LinearLayout>

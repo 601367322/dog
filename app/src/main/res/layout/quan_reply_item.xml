@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minHeight="60dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.quanliren.quan_two.custom.CircleImageView
+        android:id="@+id/userlogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:border_colors="#00000000" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="1.2dp"
+            android:layout_height="21dp"
+            android:visibility="visible"
+            android:background="@color/title_btn_press"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/above"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageView
+            android:layout_marginTop="4dp"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/point_drawable"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="1.2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:background="@color/title_btn_press"
+            android:id="@+id/follow"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/content_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
+        android:paddingLeft="2dp"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginRight="62dp"
+            android:ellipsize="end"
+            android:maxLength="18"
+            android:text="hhah"
+            android:singleLine="true"
+            android:textColor="@color/time"
+            android:textSize="15sp" />
+
+
+        <com.quanliren.quan_two.custom.emoji.EmoticonsTextView
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:lineSpacingExtra="4dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/username"
+            android:layout_marginRight="38dp"
+            android:text="hhh"
+            android:textSize="14sp"
+            android:layout_below="@id/nickname" />
+        <LinearLayout
+            android:id="@+id/rep"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reply_icon"
+                android:gravity="center"
+                android:textColor="@color/time"
+                android:text="刚刚"
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/reply_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/reply"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="6dp"
+        android:id="@+id/rep_ll"
+        android:layout_width="96dp"
+        android:background="@drawable/reply_bg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="42dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="8dp"
+        android:visibility="visible"
+        android:layout_height="56dp">
+        <LinearLayout
+            android:id="@+id/re_ll"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:layout_height="25dp">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/reply_icon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/location_txt"
+                android:layout_marginLeft="8dp"
+                android:textScaleX="1.1"
+                android:textSize="15sp"
+                android:text="回复"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/de_ll"
+            android:layout_below="@id/re_ll"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:layout_height="26dp">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/delete_icon_to"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/location_txt"
+                android:textSize="15sp"
+                android:textScaleX="1.1"
+                android:text="删除"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/content_rl"
+        android:id="@+id/buttom_line"
+        android:layout_marginLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_line"/>
+</RelativeLayout>
+</LinearLayout>

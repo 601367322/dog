@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/btn_ll"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+
+        <!-- <Button
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/input_top_btn"
+            android:gravity="center"
+            android:text="相机"
+            android:textColor="@color/title_press_txt" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/input_btm_btn"
+            android:gravity="center"
+            android:text="从相册中选择"
+            android:textColor="@color/title_press_txt" />
+ -->    </LinearLayout>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/input_one_btn"
+        android:gravity="center"
+        android:text="取消"
+        android:textSize="16sp"
+        android:textColor="@color/dialog_txt" />
+
+</LinearLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.quanliren.quan_two.custom.MyScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="110dp"
+                    android:src="@drawable/red_line_detail" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="191dp"
+                    android:src="@drawable/boy_and_dog" />
+                <!--<include
+                    android:id="@+id/head"
+                    layout="@layout/red_line_detail_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />-->
+
+
+                <View
+                    android:id="@+id/body"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bg" />
+
+                <ImageView
+                    android:id="@+id/dog_heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/heart_margin_left"
+                    android:layout_marginTop="274dp"
+                    android:src="@drawable/dog_heart" />
+
+                <ImageView
+                    android:id="@+id/red_line"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/dog_heart"
+                    android:layout_below="@id/dog_heart"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="-2dp"
+                    android:background="@color/nav_press_txt" />
+            </RelativeLayout>
+        </com.quanliren.quan_two.custom.MyScrollView>
+
+      <com.quanliren.quan_two.pull.swipe.SwipeRefreshLayout
+              android:id="@+id/swipe"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <com.quanliren.quan_two.pull.XListView
+                  android:id="@+id/listview"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:cacheColorHint="#00000000"
+                  android:divider="@null"
+                  android:dividerHeight="1dp"
+                  android:fadingEdge="none"
+                  android:fadingEdgeLength="0dp"
+                  android:fastScrollEnabled="false"
+                  android:listSelector="#00000000"
+                  android:scrollbars="vertical"></com.quanliren.quan_two.pull.XListView>
+          </com.quanliren.quan_two.pull.swipe.SwipeRefreshLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@drawable/bottom_tab"
+        android:id="@+id/bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/tab_qianshou"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_qianshou_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="牵手"
+                android:textColor="@color/nav_bar_commonn"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_chuandi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_chuandi_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="传递"
+                android:textColor="@color/nav_bar_commonn"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_close"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_close_red_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="关闭爱情传递"
+                android:textColor="@color/nav_bar_commonn"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_qianshou_icon_success" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="牵手成功"
+                android:textColor="@color/nav_press_txt"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

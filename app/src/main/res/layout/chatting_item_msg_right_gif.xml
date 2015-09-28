@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/leavetime"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="12:22"
+        android:textColor="@color/signature"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/chat_content_relativelayout_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:padding="8dip">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/error_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_error_info"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/gif_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp">
+
+                <com.quanliren.quan_two.custom.MyGifImageView
+                    android:id="@+id/gif"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/aoman_g" />
+
+                <ProgressBar
+                    android:id="@+id/gif_progress"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true" />
+            </RelativeLayout>
+
+
+            <com.quanliren.quan_two.custom.CircleImageView
+                android:id="@+id/chat_user_logo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/defalut_logo"
+                app:border_colors="@color/transparent" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/error_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/chat_content_relativelayout_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="68dp"
+            android:text="由于对方的设置，你不能发送消息"
+            android:textColor="@color/signature"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

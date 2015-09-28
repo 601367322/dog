@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.quanliren.quan_two.custom.SquareImageView
+        android:id="@+id/photo_img_view"
+        android:layout_width="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/photo_select"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/invite_unchecked" />
+
+    <com.quanliren.quan_two.custom.RoundProgressBar xmlns:pla="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/loadProgressBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"
+        pla:rmax="100"
+        android:visibility="gone"
+        pla:textSize="12sp"
+        pla:proroundWidth="2dp"
+        pla:style="STROKE"
+        pla:proroundProgressColor="@color/title_press_txt"
+        pla:proroundColor="@color/white"
+        pla:textColor="@color/title_press_txt"
+        android:progressDrawable="@drawable/progressbar" />
+</RelativeLayout>

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="8dp"
+    android:background="@color/activity_bg">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="8dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:gravity="center_vertical"
+            android:background="@drawable/my_top_bg"
+            android:layout_height="67dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/dogfood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textColor="@color/red"
+                    android:textSize="31sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dogfood"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:text="我的狗粮"
+                    android:textColor="@color/red"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/sign_in" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sign_in"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="狗粮 +1"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_shop"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center_vertical"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:id="@+id/shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/shop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/shop"
+                android:text="前往商城"
+                android:textColor="@color/time"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/caret" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:id="@+id/today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/today" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/today"
+                android:text="今日任务"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_share"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:text="分享成功"
+                android:textColor="@color/time"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="未完成"
+                android:textColor="@color/time"
+                android:textSize="13sp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_dongtai"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.8dp"
+            android:paddingRight="12dp"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dongtai" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="发布动态"
+                android:textColor="@color/time"
+                android:layout_weight="1"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/dongtai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="未完成"
+                android:textColor="@color/time"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:id="@+id/reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/reward" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/reward"
+                android:text="更多奖励"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_date"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center_vertical"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/date" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="约会成功"
+                android:textColor="@color/time"
+                android:layout_weight="1"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="未完成"
+                android:textColor="@color/time"
+                android:textSize="13sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/rl_hand"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.8dp"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center_vertical"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hand" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="牵手成功"
+                android:textColor="@color/time"
+                android:layout_weight="1"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="未完成"
+                android:textColor="@color/time"
+                android:textSize="13sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:id="@+id/iv_bind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/coin_bind" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/iv_bind"
+                android:text="绑定奖励"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/bind_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:layout_alignParentRight="true"
+                android:text="查看规则 》"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.8dp"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center_vertical"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coin_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="手机绑定"
+                android:textColor="@color/time"
+                android:layout_weight="1"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="未完成"
+                android:textColor="@color/time"
+                android:textSize="13sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret"
+                android:visibility="invisible"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_wxin"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.8dp"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center_vertical"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coin_wxin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="微信绑定"
+                android:textColor="@color/time"
+                android:layout_weight="1"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/tv_wxin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="未完成"
+                android:textColor="@color/time"
+                android:textSize="13sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret"
+                android:visibility="invisible"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_qq"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.8dp"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center_vertical"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coin_qq" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="QQ绑定"
+                android:textColor="@color/time"
+                android:layout_weight="1"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/tv_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="未完成"
+                android:textColor="@color/time"
+                android:textSize="13sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret"
+                android:visibility="invisible"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_sina"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.8dp"
+            android:background="@drawable/list_item_bg_selector_material"
+            android:gravity="center_vertical"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coin_sina" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="新浪绑定"
+                android:textColor="@color/time"
+                android:layout_weight="1"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/tv_sina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="未完成"
+                android:textColor="@color/time"
+                android:textSize="13sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret"
+                android:visibility="invisible"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

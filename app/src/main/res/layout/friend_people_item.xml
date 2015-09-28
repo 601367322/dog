@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="71dp"
+    android:background="@drawable/menu_btm_selector"
+    android:orientation="vertical">
+
+    <com.quanliren.quan_two.custom.RoundAngleImageView
+        android:id="@+id/userlogo"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:scaleType="centerCrop"
+        app:roundHeight="5dp"
+        app:roundWidth="5dp" />
+
+    <include
+        android:id="@+id/nickname_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/userlogo"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/userlogo"
+        layout="@layout/user_nick_name" />
+
+    <TextView
+        android:id="@+id/signature"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/nickname_rl"
+        android:layout_below="@id/nickname_rl"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:maxLines="1"
+        android:textColor="@color/signature"
+        android:textSize="12sp" />
+
+    <com.quanliren.quan_two.custom.StateTextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/nickname_rl"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:textSize="12sp"></com.quanliren.quan_two.custom.StateTextView>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/signature"
+        android:textSize="12sp" />
+
+</RelativeLayout>

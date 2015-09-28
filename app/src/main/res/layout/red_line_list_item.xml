@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/list_item_bg_selector_material"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_bg">
+
+            <com.quanliren.quan_two.custom.UserLogo
+                android:id="@+id/userlogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/defalut_logo"
+                app:border_colors="@color/transparent"
+                app:border_widths="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.quanliren.quan_two.custom.UserNickNameRelativeLayout
+                    android:id="@+id/nick_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/userlogo"
+                    android:layout_toRightOf="@id/userlogo"
+                    android:layout_weight="1" />
+
+                <com.quanliren.quan_two.custom.ZanLinearLayout
+                    android:id="@+id/zan_ll"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/zan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:background="@drawable/zan"
+                        android:gravity="center_vertical"
+                        android:textSize="12sp" />
+                </com.quanliren.quan_two.custom.ZanLinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="4dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/nav_press_txt"
+                android:textSize="14sp"
+                android:drawableLeft="@drawable/redline_message_icon"
+                android:drawablePadding="8dp"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/red_line_time"
+                android:drawableLeft="@drawable/redline_time_icon"
+                android:drawablePadding="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dog_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dog_food_bg"
+            android:gravity="center"
+            android:minWidth="50dp"
+            android:singleLine="true"
+            android:textColor="@color/nav_press_txt"
+            android:textSize="12sp" />
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/join_user_logo_size"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:cacheColorHint="@color/transparent"
+            android:fadingEdge="none"
+            android:horizontalSpacing="10dp"
+            android:scrollbars="none"
+            android:listSelector="#00000000"
+            android:numColumns="auto_fit"
+            android:columnWidth="30dp"
+            android:layout_marginRight="10dp"
+            android:scrollingCache="false"
+            android:stretchMode="columnWidth">
+
+        </GridView>
+
+        <TextView
+            android:id="@+id/usernumber"
+            android:layout_width="@dimen/join_user_logo_size"
+            android:layout_height="@dimen/join_user_logo_size"
+            android:background="@drawable/user_number_txt_bg"
+            android:gravity="center"
+            android:text="..."
+            android:textColor="@color/user_num_txt" />
+    </LinearLayout>
+</LinearLayout>

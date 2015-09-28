@@ -1,0 +1,1 @@
+include ':app', ':lib-seekbar',':lib-umeng', ':lib-shape-img', ':lib-camera360', ':lib-camera-video'//, ':lib-qupaisdk', ':lib-qupai'

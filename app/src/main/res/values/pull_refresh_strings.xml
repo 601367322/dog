@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pull_to_refresh_pull_label">向下拖动刷新&#8230;</string>
+    <string name="pull_to_refresh_pull_label_up">向上拖动刷新&#8230;</string>
+    <string name="pull_to_add_pull_label">点击加载更多</string>
+    <string name="pull_to_refresh_release_label">松开后刷新&#8230;</string>
+    <string name="pull_to_refresh_refreshing_label">请等待&#8230;</string>
+    <string name="pull_to_refresh_tap_label">点击刷新&#8230;</string>
+</resources>
